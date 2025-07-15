@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import cv2 as cv
 
 cap = cv.VideoCapture("Football_analysis_system\Videos\\2_cut.mp4")
-model = YOLO("yolov8n.pt")
+model = YOLO("Football_analysis_system\Model\\best.pt")
 
 #Testing for photos
 # result = model("Football_analysis_system\Photos\\3.jpg", show=True)
