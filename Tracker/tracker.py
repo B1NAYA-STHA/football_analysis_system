@@ -1,6 +1,7 @@
 from ultralytics import YOLO
 import supervision as sv
 import pickle
+<<<<<<< HEAD
 import cv2 as cv
 import os
 import numpy as np
@@ -8,12 +9,19 @@ import pandas as pd
 import sys
 sys.path.append('../')
 from utils import get_center_of_bbox, get_bbox_width
+=======
+import os
+>>>>>>> dea57d5257a8b6dd270d2d2c82ef7fb983a6692f
 
 class Tracker:
     def __init__(self, model_path):
         self.model = YOLO(model_path)
         self.tracker = sv.ByteTrack()
+<<<<<<< HEAD
    
+=======
+    
+>>>>>>> dea57d5257a8b6dd270d2d2c82ef7fb983a6692f
     def detector(self, frames):
         #detect frames in batch size of 20 at a time
         batch_size = 20
@@ -23,7 +31,10 @@ class Tracker:
             detections += detection_batch
         return detections
     
+<<<<<<< HEAD
     #function to track the players, referees and ball in each frame of video
+=======
+>>>>>>> dea57d5257a8b6dd270d2d2c82ef7fb983a6692f
     def get_tracks(self, frames, read_from_stub = False, stub_path = None):
         #load pickle file
         if read_from_stub and stub_path is not None and os.path.exists(stub_path):
@@ -82,6 +93,7 @@ class Tracker:
                 pickle.dump(tracks, f)
         
         return tracks
+<<<<<<< HEAD
     
     def draw_ellipse(self, frame, bbox, color, track_id=None):
         y2 = int(bbox[3])
@@ -165,3 +177,6 @@ class Tracker:
             output_video_frame.append(frame)
         
         return output_video_frame
+=======
+        
+>>>>>>> dea57d5257a8b6dd270d2d2c82ef7fb983a6692f
