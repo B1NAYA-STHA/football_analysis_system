@@ -31,10 +31,6 @@ class Tracker:
             detections += detection_batch
         return detections
     
-<<<<<<< HEAD
-    #function to track the players, referees and ball in each frame of video
-=======
->>>>>>> dea57d5257a8b6dd270d2d2c82ef7fb983a6692f
     def get_tracks(self, frames, read_from_stub = False, stub_path = None):
         #load pickle file
         if read_from_stub and stub_path is not None and os.path.exists(stub_path):

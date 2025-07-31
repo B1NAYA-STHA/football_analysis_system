@@ -6,7 +6,7 @@ from Tracker import Tracker
 def main():
 
     model = YOLO("Football_analysis_system\Model\\best.pt")
-<<<<<<< HEAD
+<<<<<< HEAD
     video_frames = read_video("Football_analysis_system\Videos\\1.mp4")
 =======
     video_frames = read_video("Football_analysis_system\Videos\\2_cut.mp4")
